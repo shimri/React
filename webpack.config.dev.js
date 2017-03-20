@@ -21,7 +21,7 @@ import webpack from 'webpack'
        {
          test: /\.js$/,
          include: path.join(__dirname, 'client'),
-         loaders: ['react-hot', 'babel' ]
+         loaders: [ 'react-hot','babel' ]
        }
      ]
    },
