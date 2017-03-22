@@ -5,9 +5,16 @@ import webpack from 'webpack'
 import webpackMiddleweare from 'webpack-dev-middleware'
 import webpackConfig from '../webpack.config.dev.js'
 import webpackHotMiddleware from 'webpack-hot-middleware'
+import bodyParser from 'body-parser'
 
+import users from './routes/users'
 
 let app = express()
+
+app.use(bodyParser.json())
+
+app.use('/api/users',users)
+
 const compiler = webpack(webpackConfig)
 app.use(webpackMiddleweare(compiler,{
   hot:true,
