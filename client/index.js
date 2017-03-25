@@ -18,11 +18,11 @@ const store = createStore(
 render(
   <Provider store={store}>
   <Router >
-    <div>
-      <Route exact path="/*" component={App}/>
-      <Route exact path="/" component={Greetings}/>
-      <Route exact path="/signup" component={SignupPage}/>
-    </div>
+     <div>
+       <Route exact path="/*" component={App}/>
+       <Route exact path="/" component={Greetings}/>
+       <Route exact path="/signup" component={SignupPage}/>
+     </div>
   </Router>
   </Provider>
   ,document.getElementById('app'))
