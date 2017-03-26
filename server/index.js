@@ -1,5 +1,6 @@
 import express from 'express'
 import path from 'path'
+
 //Webpack
 import webpack from 'webpack'
 import webpackMiddleweare from 'webpack-dev-middleware'
@@ -8,6 +9,11 @@ import webpackHotMiddleware from 'webpack-hot-middleware'
 import bodyParser from 'body-parser'
 
 import users from './routes/users'
+
+const config = require('../config');
+
+// connect to the database and load models
+require('./models').connect(config.dbUri);
 
 let app = express()
 

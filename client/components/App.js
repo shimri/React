@@ -1,6 +1,6 @@
 import React from 'react'
 import NavigationBar  from './NavigationBar'
-
+import FlashMessagesList from '../components/flash/FlashMessagesList'
 
 class App extends React.Component {
    render() {
@@ -8,6 +8,7 @@ class App extends React.Component {
      return (
       <div className="container">
         <NavigationBar />
+        <FlashMessagesList/>
       </div>
      )
    }
