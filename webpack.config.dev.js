@@ -24,11 +24,19 @@ import webpack from 'webpack'
                   path.join(__dirname, 'client'),
                   path.join(__dirname, 'server/shared')
                   ],
-         loaders: [ 'react-hot','babel' ]
+         loaders: [ 'react-hot','babel']
+       },
+       {
+          test: /\.json$/,
+          loader: 'json-loader'
        }
      ]
    },
    resolve: {
      extentions: [ '', '.js' ]
+   },
+   node:{
+     dns:'empty',
+     net:'empty'
    }
  }

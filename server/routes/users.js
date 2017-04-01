@@ -29,7 +29,7 @@ router.post('/', (req, res) => {
         .then(user => res.json({success:true}))
         .catch(err => res.status(500).json({error:error}))
       } else {
-          res.status(400).json(errors)
+          res.json(errors)
       }
   })
 
