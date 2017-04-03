@@ -34,9 +34,5 @@ import webpack from 'webpack'
    },
    resolve: {
      extentions: [ '', '.js' ]
-   },
-   node:{
-     dns:'empty',
-     net:'empty'
    }
  }
